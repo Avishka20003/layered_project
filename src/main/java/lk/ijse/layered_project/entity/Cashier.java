@@ -7,15 +7,9 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Doctor {
+public class Cashier {
     private int id;
     private String name;
     private String address;
     private String contact;
-    private String specialist;
-    private String status;
-
-    public Doctor(String text, String text1, String text2, String text3) {
-
-    }
 }

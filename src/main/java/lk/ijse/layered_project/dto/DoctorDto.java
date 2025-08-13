@@ -1,4 +1,4 @@
-package lk.ijse.layered_project.entity;
+package lk.ijse.layered_project.dto;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Doctor {
+public class DoctorDto {
     private int id;
     private String name;
     private String address;
@@ -15,7 +15,7 @@ public class Doctor {
     private String specialist;
     private String status;
 
-    public Doctor(String text, String text1, String text2, String text3) {
+    public DoctorDto(String text, String text1, String text2, String text3) {
 
     }
 }

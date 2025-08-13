@@ -1,44 +1,49 @@
 package lk.ijse.layered_project.dao.custom.impl;
 
+import lk.ijse.layered_project.dao.SQLUtil;
 import lk.ijse.layered_project.dao.custom.DoctorDAO;
+import lk.ijse.layered_project.dto.DoctorDto;
 import lk.ijse.layered_project.entity.Doctor;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class DoctorDAOImpl implements DoctorDAO {
-    @Override
-    public ArrayList<Doctor> getAll() throws SQLException, ClassNotFoundException {
-        return null;
+public class DoctorDAOImpl implements DoctorDAO  {
+
+
+    public boolean save(Doctor doctor) throws SQLException, ClassNotFoundException{
+        return SQLUtil.executeUpdate(
+                "INSERT INTO Employee (name, contact_number, address, role, specialist, status) VALUES (?,?,?,?,?,?)",
+                doctor.getName(), doctor.getContact(), doctor.getAddress(), "Doctor", doctor.getSpecialist(), doctor.getStatus()
+        );
     }
 
-    @Override
-    public boolean save(Doctor customerDTO) throws SQLException, ClassNotFoundException {
-        return false;
+    public boolean update(Doctor doctor)throws SQLException, ClassNotFoundException{
+        return SQLUtil.executeUpdate(
+                "UPDATE Employee SET name=?, contact_number=?, address=?, specialist=?, status=? WHERE employee_id=? AND role='Doctor'",
+                doctor.getName(), doctor.getContact(), doctor.getAddress(), doctor.getSpecialist(), doctor.getStatus(), doctor.getId()
+        );
     }
 
-    @Override
-    public boolean update(Doctor customerDTO) throws SQLException, ClassNotFoundException {
-        return false;
+    public boolean delete(String id)throws SQLException, ClassNotFoundException{
+        return SQLUtil.executeUpdate("DELETE FROM Employee WHERE employee_id=? AND role='Doctor'", id);
     }
 
-    @Override
-    public boolean exist(String id) throws SQLException, ClassNotFoundException {
-        return false;
+    public ArrayList<Doctor> getAll()throws SQLException, ClassNotFoundException{
+        ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Employee WHERE role='Doctor'");
+        ArrayList<Doctor> list = new ArrayList<>();
+        while (rs.next()) {
+            list.add(new Doctor(
+                    rs.getInt("employee_id"),
+                    rs.getString("name"),
+                    rs.getString("address"),
+                    rs.getString("contact_number"),
+                    rs.getString("specialist"),
+                    rs.getString("status")
+            ));
+        }
+        return list;
     }
 
-    @Override
-    public boolean delete(String id) throws SQLException, ClassNotFoundException {
-        return false;
-    }
-
-    @Override
-    public String generateNewId() throws SQLException, ClassNotFoundException {
-        return "";
-    }
-
-    @Override
-    public Doctor search(String id) throws SQLException, ClassNotFoundException {
-        return null;
-    }
 }

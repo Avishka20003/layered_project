@@ -4,14 +4,12 @@ import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-
-public class DoctorDTO {
+@Getter
+@Setter
+@ToString
+public class MidwifeDto {
     private int id;
     private String name;
     private String address;
     private String contact;
-    private String specialist;
-    private String status;
-
 }
