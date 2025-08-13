@@ -39,7 +39,7 @@ public class SessionDAOImpl implements SessionDAO  {
         return sessions;
     }
 
-    public boolean delete(String sessionId) throws SQLException, ClassNotFoundException {
+    public boolean delete(int sessionId) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM session WHERE session_id=?";
         boolean isDelete = SQLUtil.executeUpdate(sql,sessionId);
         return isDelete;

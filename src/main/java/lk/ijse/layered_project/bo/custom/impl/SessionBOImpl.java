@@ -56,7 +56,7 @@ public class SessionBOImpl implements SessionBO {
     }
 
     @Override
-    public boolean deleteSession(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteSession(int id) throws SQLException, ClassNotFoundException {
         return sessionDAO.delete(id);
 
 }

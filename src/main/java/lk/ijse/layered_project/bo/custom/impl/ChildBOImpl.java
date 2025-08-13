@@ -74,7 +74,7 @@ public class ChildBOImpl implements ChildBO {
     }
 
     @Override
-    public boolean deleteChild(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteChild(int id) throws SQLException, ClassNotFoundException {
         return childDAO.delete(id);
     }
 }

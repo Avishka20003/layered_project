@@ -35,7 +35,7 @@ public class TestDAOImpl implements TestDAO  {
         return tests;
     }
 
-    public boolean delete(String testId) throws SQLException, ClassNotFoundException {
+    public boolean delete(int testId) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM test WHERE id=?";
         boolean isDeleted =SQLUtil.executeUpdate(sql, testId);
         return isDeleted;

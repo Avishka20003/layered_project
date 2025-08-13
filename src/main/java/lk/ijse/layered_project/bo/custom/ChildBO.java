@@ -18,5 +18,5 @@ public interface ChildBO extends SuperBO {
 
     public boolean updateChild(ChildDto dto) throws SQLException, ClassNotFoundException;
 
-    public boolean deleteChild(String id) throws SQLException, ClassNotFoundException ;
+    public boolean deleteChild(int id) throws SQLException, ClassNotFoundException ;
 }

@@ -1,0 +1,256 @@
+/* Main layout: white background, teal border */
+.main-pane {
+    -fx-background-color: white;
+    -fx-border-color: #57b5ad;
+    -fx-border-width: 3px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+}
+
+/* Underlined text field style */
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #57b5ad transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-padding: 6px 10px;
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+}
+
+/* Generic button */
+.button {
+    -fx-background-color: #57b5ad;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #459b94;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: white;
+    -fx-border-color: #57b5ad;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px;
+}
+
+/* Blue Button (Refresh) */
+.button-blue {
+    -fx-background-color: #3498db; /* Blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-blue:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Green Button (Add) */
+.button-green {
+    -fx-background-color: #28a745; /* Green */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-green:hover {
+    -fx-background-color: #1e7e34;
+}
+
+/* Red Button (Delete or Cancel) */
+.button-red {
+    -fx-background-color: #e74c3c; /* Red */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-red:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* TabPane background and border */
+.tab-pane {
+    -fx-background-color: white;
+    -fx-border-color: #57b5ad;
+    -fx-border-width: 3px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+/* Tab header area background */
+.tab-pane .tab-header-background {
+    -fx-background-color: #57b5ad;
+    -fx-background-radius: 10 10 0 0;
+}
+
+/* Each Tab */
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-padding: 8px 15px;
+    -fx-background-insets: 0;
+}
+
+/* Selected tab */
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #57b5ad #57b5ad white #57b5ad;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+}
+
+/* Tab text */
+.tab-pane .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Selected tab text */
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #57b5ad;
+}
+
+/* Hover effect on tabs */
+.tab-pane .tab:hover {
+    -fx-background-color: #45a8a1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: #2e8b7d;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+}
+/* TableView base styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1c4e9;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+    -fx-table-cell-border-color: #e1dce9;
+    -fx-control-inner-background: white;
+    -fx-selection-bar: #b39ddb; /* selected row color */
+    -fx-selection-bar-text: #333;
+}
+
+/* Table column headers */
+.table-view .column-header-background {
+    -fx-background-color: #7e57c2;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #7e57c2;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6px;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #f3e5f5;
+    -fx-padding: 4px;
+}
+
+/* Hover effect for rows */
+.table-row-cell:hover {
+    -fx-background-color: #ede7f6;
+}
+
+/* Selected row */
+.table-row-cell:filled:selected, .table-cell:filled:selected {
+    -fx-background-color: #b39ddb;
+    -fx-text-fill: #000;
+}
+
+/* Cell text */
+.table-cell {
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+    -fx-padding: 6px;
+}
+/* TableView base styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #c6eeeb;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+    -fx-table-cell-border-color: #e1f7f5;
+    -fx-control-inner-background: white;
+    -fx-selection-bar: #b2e0dc; /* selected row color */
+    -fx-selection-bar-text: #333;
+}
+
+/* Table column headers */
+.table-view .column-header-background {
+    -fx-background-color: #57b5ad;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #57b5ad;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6px;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #e1f7f5;
+    -fx-padding: 4px;
+}
+
+/* Hover effect for rows */
+.table-row-cell:hover {
+    -fx-background-color: #e0f7f5;
+}
+
+/* Selected row */
+.table-row-cell:filled:selected, .table-cell:filled:selected {
+    -fx-background-color: #b2e0dc;
+    -fx-text-fill: #000;
+}
+
+/* Cell text */
+.table-cell {
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+    -fx-padding: 6px;
+}
+
+.input-label {
+    -fx-font-family: 'Segoe UI Semibold', 'Roboto Medium', 'Helvetica Neue', Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800; /* Semi-bold (normal=400, bold=700) */
+    -fx-text-fill: #444444;
+    -fx-padding: 0 0 4px 2px;
+    -fx-letter-spacing: 0.15px;
+}

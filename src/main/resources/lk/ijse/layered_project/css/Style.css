@@ -1,0 +1,119 @@
+/* Base button style */
+
+.sidebar{
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-background-radius: 10px;
+}
+
+.main-box{
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-background-radius: 10px;
+}
+.btn {
+    /*-fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;*/
+    -fx-background-color: #57b5ad;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+    /*-fx-padding: 10px 20px;*/
+    -fx-font-size: 12px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 10px;
+    /*-fx-font-weight: lighter;  !* Makes text bold *!*/
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.small-btn {
+    /*-fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;*/
+    -fx-background-color: #57b5ad;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+    -fx-padding: 4px 8px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 10px;
+    /*-fx-font-weight: lighter;  !* Makes text bold *!*/
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/* Hover effect for base style */
+.btn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.btn:focused{
+    -fx-background-color: #00796B;
+    -fx-text-fill: white;
+}
+
+/* Red button */
+.btn-red {
+    -fx-background-color: #e74c3c;
+}
+.btn-lGreen{
+    -fx-background-color: #2ee64e;
+}
+
+.btn-lGreen:hover{
+    -fx-background-color: #127e1d;
+}
+
+.btn-lGreen:focused{
+    -fx-background-color: #127e1d;
+}
+
+/* Blue button */
+.btn-blue {
+    -fx-background-color: #3498db;
+}
+
+/* Green button */
+.btn-green {
+    -fx-background-color: #2ecc71;
+}
+
+/* Orange button */
+.btn-orange {
+    -fx-background-color: #e67e22;
+}
+
+/* Purple button */
+.btn-purple {
+    -fx-background-color: #9b59b6;
+}
+
+.anchor-pane {
+    -fx-background-image: url("../images/logo/img.png");  /* Place this image in the same package or `/resources/` */
+    /*-fx-background-size: cover;  !* or "stretch", "contain", "100% 100%" *!*/
+    -fx-background-repeat: no-repeat;
+    -fx-background-image-opacity: 0.5;
+    -fx-background-position: center center;
+}
+
+.shadow-effect {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.2, 0, 4);
+    -fx-background-radius: 10px;
+}
+.textfield-bottom-border {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #97979f transparent; /* Only bottom border */
+    -fx-border-width: 0 0 1 0; /* Only bottom */
+    -fx-padding: 4 0 4 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.textField-invalid{
+    -fx-border-color: red;
+}

@@ -44,7 +44,7 @@ public class TestBOImpl implements TestBO {
     }
 
     @Override
-    public boolean deleteTest(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteTest(int id) throws SQLException, ClassNotFoundException {
         return testDAO.delete(id);
     }
 }

@@ -48,7 +48,7 @@ public class ChildDAOImpl implements ChildDAO {
         );
     }
 
-    public boolean delete(String childId) throws SQLException, ClassNotFoundException {
+    public boolean delete(int childId) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM child WHERE child_id=?";
         return SQLUtil.executeUpdate(sql, childId);
     }

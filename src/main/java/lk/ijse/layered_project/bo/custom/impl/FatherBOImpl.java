@@ -64,7 +64,7 @@ public class FatherBOImpl implements FatherBO {
     }
 
     @Override
-    public boolean deleteFather(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteFather(int id) throws SQLException, ClassNotFoundException {
         return fatherDAO.delete(id);
     }
 }

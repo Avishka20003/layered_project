@@ -10,7 +10,7 @@ public class DAOFactory {
         return (daoFactory==null)?new DAOFactory():daoFactory;
     }
     public enum DAOTypes {
-        CHILD,CLINIC,DOCTOR,EMPLOYEE,FATHER,MOTHER,SESSION,TEST
+        CHILD,CLINIC,DOCTOR,EMPLOYEE,FATHER,MOTHER,SESSION,TEST,MIDWIFE,CASHIER,FAMILY
 
 
     }
@@ -36,6 +36,18 @@ public class DAOFactory {
 
             case TEST:
                 return new TestDAOImpl();
+
+                case MIDWIFE:
+                    return new MidwifeDAOImpl();
+
+                    case CASHIER:
+                        return new CashierDAOImpl();
+
+                        case EMPLOYEE:
+                            return new EmployeeDAOImpl();
+
+            case FAMILY:
+                return new FamilyDAOImpl();
 
             default:
                 return null;

@@ -13,5 +13,5 @@ public interface ClinicBO extends SuperBO {
     public ArrayList<ClinicDto> getAllClinic() throws SQLException, ClassNotFoundException ;
     public boolean saveClinic(ClinicDto dto) throws SQLException, ClassNotFoundException ;
     public boolean updateClinic(ClinicDto dto) throws SQLException, ClassNotFoundException ;
-    public boolean deleteClinic(String id) throws SQLException, ClassNotFoundException ;
+    public boolean deleteClinic(int id) throws SQLException, ClassNotFoundException ;
 }

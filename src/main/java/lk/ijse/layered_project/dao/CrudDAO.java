@@ -7,7 +7,7 @@ import java.util.ArrayList;
         public ArrayList<T> getAll() throws SQLException, ClassNotFoundException;
         public boolean save(T dto) throws SQLException, ClassNotFoundException;
         public boolean update(T dto) throws SQLException, ClassNotFoundException;
-        public boolean delete(String id) throws SQLException, ClassNotFoundException;
+        public boolean delete(int id) throws SQLException, ClassNotFoundException;
 
 
     }

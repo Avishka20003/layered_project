@@ -26,7 +26,7 @@ public class DoctorDAOImpl implements DoctorDAO  {
         );
     }
 
-    public boolean delete(String id)throws SQLException, ClassNotFoundException{
+    public boolean delete(int id)throws SQLException, ClassNotFoundException{
         return SQLUtil.executeUpdate("DELETE FROM Employee WHERE employee_id=? AND role='Doctor'", id);
     }
 

@@ -2,8 +2,10 @@ package lk.ijse.layered_project.dao.custom.impl;
 
 import javafx.scene.control.Alert;
 import lk.ijse.layered_project.dao.SQLUtil;
+import lk.ijse.layered_project.dao.custom.FamilyDAO;
 import lk.ijse.layered_project.dao.custom.MotherDAO;
 import lk.ijse.layered_project.db.DBConnection;
+import lk.ijse.layered_project.dto.FamilyDto;
 import lk.ijse.layered_project.dto.MotherDto;
 import lk.ijse.layered_project.entity.Mother;
 
@@ -18,8 +20,9 @@ public class MotherDAOImpl implements MotherDAO {
 
 //    FamilyModel familyModel = new FamilyModel();
 
+
     public boolean save(Mother mother) throws SQLException, ClassNotFoundException {
-        Connection connection = DBConnection.getInstance().getConnection();
+       /* Connection connection = DBConnection.getInstance().getConnection();
         connection.setAutoCommit(false);
         try{
 
@@ -63,7 +66,26 @@ public class MotherDAOImpl implements MotherDAO {
             throw new SQLException(e.getMessage());
         } finally {
             connection.setAutoCommit(true);
-        }
+        }*/
+        String sql = "INSERT INTO mother (mother_id,name, address, nic, dob, occupation, email, phone_number, weight, height, allergies, medical_history, note, blood_type) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+        boolean isSaveMother =  SQLUtil.executeUpdate(sql,
+                mother.getMother_id(),
+                mother.getName(),
+                mother.getAddress(),
+                mother.getNic(),
+                mother.getDob(),
+                mother.getOccupation(),
+                mother.getEmail(),
+                mother.getPhone_number(),
+                mother.getWeight(),
+                mother.getHeight(),
+                mother.getAllergies(),
+                mother.getMedical_history(),
+                mother.getNote(),
+                mother.getBlood_type()
+        );
+        return isSaveMother;
     }
 
     public int getNextId() throws SQLException, ClassNotFoundException {
@@ -98,7 +120,7 @@ public class MotherDAOImpl implements MotherDAO {
         );
     }
 
-    public boolean delete(String motherId) throws SQLException, ClassNotFoundException {
+    public boolean delete(int motherId) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM mother WHERE mother_id=?";
         return SQLUtil.executeUpdate(sql, motherId);
     }
@@ -131,7 +153,7 @@ public class MotherDAOImpl implements MotherDAO {
         return motherList;
     }
 
-    public ArrayList<Test> getAllTestMotherById(int id) throws SQLException, ClassNotFoundException {
+   /* public ArrayList<Test> getAllTestMotherById(int id) throws SQLException, ClassNotFoundException {
         ArrayList<Test> ids = new ArrayList<>();
         String sql = "SELECT * FROM Test where mother_id=?";
         ResultSet resultSet = SQLUtil.executeQuery(sql);
@@ -143,6 +165,17 @@ public class MotherDAOImpl implements MotherDAO {
             );
         }
         return ids;
+    }
+*/
+
+
+    public int getMotherNextId() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = SQLUtil.executeQuery("SELECT MAX(mother_id) FROM Mother ORDER BY mother_id LIMIT 1");
+
+        if (resultSet.next()){
+            return resultSet.getInt(1)+1;
+        }
+        return 0;
     }
 
 

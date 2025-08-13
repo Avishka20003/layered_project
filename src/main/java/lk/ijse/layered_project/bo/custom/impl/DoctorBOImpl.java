@@ -55,7 +55,7 @@ public class DoctorBOImpl implements DoctorBO {
     }
 
     @Override
-    public boolean deleteDoctor(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteDoctor(int id) throws SQLException, ClassNotFoundException {
         return doctorDAO.delete(id);
     }
 }

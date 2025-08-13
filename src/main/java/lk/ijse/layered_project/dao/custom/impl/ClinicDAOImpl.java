@@ -49,7 +49,7 @@ public class ClinicDAOImpl implements ClinicDAO {
     }
 
     @Override
-    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+    public boolean delete(int id) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM clinic WHERE clinic_id=? " , id);
     }
 }

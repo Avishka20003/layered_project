@@ -41,7 +41,7 @@ public class FatherDAOImpl implements FatherDAO {
         );
     }
 
-    public boolean delete(String fatherId) throws SQLException, ClassNotFoundException {
+    public boolean delete(int fatherId) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM father WHERE father_id=?";
         return SQLUtil.executeUpdate(sql, fatherId);
     }

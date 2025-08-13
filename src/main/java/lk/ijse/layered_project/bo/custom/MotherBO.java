@@ -15,5 +15,5 @@ public interface MotherBO extends SuperBO {
 
     public boolean updateMother(MotherDto dto) throws SQLException, ClassNotFoundException;
 
-    public boolean deleteMother(String id) throws SQLException, ClassNotFoundException;
+    public boolean deleteMother(int id) throws SQLException, ClassNotFoundException;
 }

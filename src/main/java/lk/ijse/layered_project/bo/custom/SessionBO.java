@@ -15,5 +15,5 @@ public interface SessionBO extends SuperBO {
 
     public boolean updateSession(SessionDto dto) throws SQLException, ClassNotFoundException;
 
-    public boolean deleteSession(String id) throws SQLException, ClassNotFoundException;
+    public boolean deleteSession(int id) throws SQLException, ClassNotFoundException;
 }

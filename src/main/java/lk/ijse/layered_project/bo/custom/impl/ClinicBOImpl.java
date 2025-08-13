@@ -56,7 +56,7 @@ public class ClinicBOImpl implements ClinicBO {
     }
 
     @Override
-    public boolean deleteClinic(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteClinic(int id) throws SQLException, ClassNotFoundException {
         return clinicDAO.delete(id);
     }
 }

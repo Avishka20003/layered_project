@@ -1,0 +1,38 @@
+/* white-theme.css */
+.table-view {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: #e0e0e0;
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, #aaaaaa, 5, 0, 0, 2);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-insets: 0 0 1 0;
+    -fx-padding: 0 0 5 0;
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #444;
+}
+
+.table-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #e6f2ff;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f9f9f9;
+}

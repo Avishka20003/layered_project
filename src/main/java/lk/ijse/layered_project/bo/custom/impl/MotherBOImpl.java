@@ -82,7 +82,7 @@ public class MotherBOImpl implements MotherBO {
     }
 
     @Override
-    public boolean deleteMother(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteMother(int id) throws SQLException, ClassNotFoundException {
         return motherDAO.delete(id);
     }
 }
