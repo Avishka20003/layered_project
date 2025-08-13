@@ -27,7 +27,7 @@ public class ClinicDAOImpl implements ClinicDAO {
         ResultSet resultSet = SQLUtil.executeQuery(sql);
         ArrayList<Clinic> clinic = new ArrayList<>();
         while (resultSet.next()) {
-            Clinic clinic = new Clinic(
+            Clinic clinics = new Clinic(
                     resultSet.getInt("clinic_id"),
                     resultSet.getString("clinic_name"),
                     resultSet.getString("location"),
@@ -36,7 +36,7 @@ public class ClinicDAOImpl implements ClinicDAO {
                     resultSet.getString("status")
 
             );
-            clinic.add(clinic);
+            clinic.add(clinics);
 
         }
         return clinic;
@@ -46,6 +46,11 @@ public class ClinicDAOImpl implements ClinicDAO {
         String sql = "UPDATE clinic SET clinic_name=?,location=?,description=?,contact=? WHERE clinic_id=?";
         boolean isUpdated = SQLUtil.executeUpdate(sql , clinic.getClinic_name(),clinic.getClinic_location(),clinic.getDescription(),clinic.getContact(),clinic.getClinic_id());
         return isUpdated;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        return SQLUtil.executeUpdate("DELETE FROM clinic WHERE clinic_id=? " , id);
     }
 }
 

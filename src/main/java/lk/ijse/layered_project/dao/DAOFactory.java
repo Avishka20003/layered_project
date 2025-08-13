@@ -1,5 +1,8 @@
 package lk.ijse.layered_project.dao;
 
+import lk.ijse.layered_project.bo.custom.impl.*;
+import lk.ijse.layered_project.dao.custom.impl.*;
+
 public class DAOFactory {
     private static DAOFactory daoFactory;
     private DAOFactory() {}
@@ -7,24 +10,35 @@ public class DAOFactory {
         return (daoFactory==null)?new DAOFactory():daoFactory;
     }
     public enum DAOTypes {
-        CHILD,CLINIC,EMPLOYEE,FATHER,MOTHER,SESSION,TEST
+        CHILD,CLINIC,DOCTOR,EMPLOYEE,FATHER,MOTHER,SESSION,TEST
 
 
     }
-  /*  public SuperDAO getDAO(DAOTypes daoType) {
+    public SuperDAO getDAO(DAOTypes daoType) {
         switch(daoType){
-            case CUSTOMER:
-                return new CustomerDAOImpl();
-            case ITEM:
-                return new ItemDAOImpl();
-            case ORDER:
-                return new OderDAOImpl();
-            case ORDER_DETAIL:
-                return new OrderDetailDAOImpl();
-            case QUERY:
-                return new QueryDAOImpl();
+            case CHILD:
+                return new ChildDAOImpl();
+
+            case CLINIC:
+                return new ClinicDAOImpl();
+
+                case DOCTOR:
+                    return new DoctorDAOImpl();
+
+            case FATHER:
+                return new FatherDAOImpl();
+
+            case MOTHER:
+                return new MotherDAOImpl();
+
+            case SESSION:
+                return new SessionDAOImpl();
+
+            case TEST:
+                return new TestDAOImpl();
+
             default:
                 return null;
         }
-    }*/
+    }
 }
