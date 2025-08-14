@@ -20,7 +20,7 @@ AppInitializer extends Application {
 //        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/layered_project/Session.fxml"))));
 //        primaryStage.show();
 
-        Parent parent = FXMLLoader.load(getClass().getResource("/lk/ijse/layered_project/Clinic.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("/lk/ijse/layered_project/Test.fxml"));
         Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.show();

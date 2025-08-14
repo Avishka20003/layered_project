@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.layered_project.controller.TestController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #197369;">
+               <children>
+                  <ComboBox fx:id="cmbMotherSearchId" prefWidth="230.0" promptText="Mother Name">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#btnMotherIdSearchOnAction" prefWidth="200.0" text="Search" />
+                  <Region prefHeight="82.0" prefWidth="262.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Region>
+                  <ComboBox fx:id="cmbMotherAddId" prefWidth="225.0" promptText="Mother add Name" />
+                  <ComboBox fx:id="cmbMoherTestId" prefWidth="225.0" promptText="Test name" />
+                  <Button mnemonicParsing="false" onAction="#btnMotherIdTestIdAddOnAction" prefWidth="180.0" text="Add">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="322.0" prefWidth="590.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="361.0" prefWidth="210.0" style="-fx-background-color: #197369;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1-3 Month Program">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="bloodTestCheckBox" alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox1BloodTest" mnemonicParsing="false" text="Blood test" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox1UrineTest" mnemonicParsing="false" text="Urine  test" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox1UltrasoundTest" mnemonicParsing="false" text="Ultrasound  test" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox1FolicAcid" mnemonicParsing="false" text="Folic acid" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox1FerrousSulfate" mnemonicParsing="false" text="Ferrous sulfate" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="304.0" prefWidth="22.0" style="-fx-background-color: #197369;" />
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="277.0" prefWidth="214.0" style="-fx-background-color: #197369;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="188.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4-6 Month Program">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2OgttTest" mnemonicParsing="false" text="OGTT test" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2TetanusVaccineTest" mnemonicParsing="false" text="Tetanus vaccine test" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2FolicAcid" mnemonicParsing="false" text="Folic acid" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2FerrousSulfate" mnemonicParsing="false" text="Ferrous sulfate" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="216.0" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2VitaminD" mnemonicParsing="false" text="Vitamin D" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="189.0" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox2Calcium" mnemonicParsing="false" text="Calcium" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="304.0" prefWidth="5.0" style="-fx-background-color: #197369;" />
+                  <VBox layoutX="184.0" layoutY="10.0" prefHeight="361.0" prefWidth="196.0" style="-fx-background-color: #197369;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="188.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="7-9 Month Program">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox3AllTestWeeklyChecks" mnemonicParsing="false" text="All test weekly checks" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox3FolicAcid" mnemonicParsing="false" text="Folic acid" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="215.0">
+                           <children>
+                              <CheckBox fx:id="checkBox3FerrousSulfate" mnemonicParsing="false" text="Ferrous sulfate" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

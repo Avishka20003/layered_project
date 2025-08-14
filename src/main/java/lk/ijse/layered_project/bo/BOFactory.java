@@ -11,7 +11,7 @@ public class BOFactory {
         return (boFactory == null) ? new BOFactory() : boFactory;
     }
     public enum BOTypes{
-        CHILD,CLINIC,EMPLOYEE,FATHER,MOTHER,SESSION,TEST
+        CHILD,CLINIC,EMPLOYEE,FATHER,MOTHER,SESSION,TEST,FAMILY
     }
     public SuperBO getBO(BOTypes boType) {
         switch(boType){
@@ -32,6 +32,9 @@ public class BOFactory {
 
            case TEST:
                 return new TestBOImpl();
+
+                case FAMILY:
+                    return new FamilyBOImpl();
 
             default:
                 return null;
