@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="464.0" prefWidth="738.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.m_h_c_system.controller.FamilyManageController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Family Overview">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="5.0">
+                           <children>
+                              <TextField prefHeight="34.0" prefWidth="263.0" promptText="Search" />
+                              <Button mnemonicParsing="false" prefHeight="2.0" prefWidth="100.0" text="Search" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <AnchorPane prefHeight="322.0" prefWidth="600.0" style="-fx-background-color: red;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <GridPane fx:id="gridFamily" alignment="TOP_CENTER" hgap="10.0" vgap="10.0">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content></Tab>
+          <Tab text="Mother Management">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #57b5ad;">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="729.0" VBox.vgrow="ALWAYS">
+                                <content>
+                                  <AnchorPane prefHeight="233.0" prefWidth="714.0">
+                                       <children>
+                                          <VBox prefHeight="346.0" prefWidth="727.0" spacing="7.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="266.0" spacing="10.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mother Id">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <Label fx:id="lableId" prefHeight="22.0" prefWidth="26.0" styleClass="input-label">
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets top="2.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" styleClass="input-label" text=" Name">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherName" prefHeight="26.0" prefWidth="156.0" promptText="Name" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" styleClass="input-label" text="Weight">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherWeight" prefHeight="26.0" prefWidth="127.0" promptText="Weight" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" styleClass="input-label" text="Address">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherAddress" prefHeight="26.0" prefWidth="156.0" promptText="Address" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets top="1.0" />
+                                                               </HBox.margin></TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" styleClass="input-label" text="Height">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherHeight" prefHeight="26.0" prefWidth="127.0" promptText="Height" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="40.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" styleClass="input-label" text="Nic">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherNic" prefHeight="26.0" prefWidth="156.0" promptText="Nic" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets top="1.0" />
+                                                               </HBox.margin></TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" styleClass="input-label" text="Allergies">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherAllergies" prefHeight="26.0" prefWidth="127.0" promptText="Allergirs" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="66.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" styleClass="input-label" text="Dob">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherDob" prefHeight="26.0" prefWidth="156.0" promptText="Dob" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" styleClass="input-label" text="Medical History">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextArea fx:id="txtMotherMedicalHistory" prefHeight="39.0" prefWidth="227.0" promptText="Medical history" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="92.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" text="Occupation">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherOccupation" prefHeight="26.0" prefWidth="156.0" promptText="Occupation" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" text="Note">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextArea fx:id="txtMotherNote" prefHeight="39.0" prefWidth="230.0" promptText="Note" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="117.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" text="Email">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherEmail" prefHeight="26.0" prefWidth="156.0" promptText="Email" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="90.0" text="Blood type">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <ComboBox fx:id="cmbMotherBloodType" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                                                               <items>
+                                                                  <FXCollections fx:factory="observableArrayList">
+                                                                     <String fx:value="A+" />
+                                                                     <String fx:value="A-" />
+                                                                     <String fx:value="B+" />
+                                                                     <String fx:value="B-" />
+                                                                     <String fx:value="AB+" />
+                                                                     <String fx:value="AB-" />
+                                                                     <String fx:value="O+" />
+                                                                     <String fx:value="O-" />
+                                                                  </FXCollections>
+                                                               </items>
+                                                               <HBox.margin>
+                                                                  <Insets left="30.0" />
+                                                               </HBox.margin>
+                                                            </ComboBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="143.0" prefHeight="0.0" prefWidth="579.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="18.0" prefWidth="79.0" text="Phone number">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtMotherPhoneNumber" prefHeight="26.0" prefWidth="156.0" promptText="Phone number" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </HBox.margin></TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="586.0" spacing="10.0">
+                                                   <children>
+                                                      <Label prefHeight="18.0" prefWidth="79.0" text="Father Id">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="cmbFatherId" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="0.0" prefWidth="579.0" />
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="718.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnMotherRefashOnAction" text="Refash">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btnAddMother" mnemonicParsing="false" onAction="#btnAddMotherOnAction" text="Add mother">
+                                                         <HBox.margin>
+                                                            <Insets right="21.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btnUpdateMother" mnemonicParsing="false" onAction="#btnUpdateMotherOnAction" text="Update mother">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                              <TableView fx:id="tblMother" onMouseClicked="#tableMotherOnClick" prefHeight="350.0" prefWidth="722.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="colMotherId" prefWidth="75.0" text="Mother Id" />
+                                  <TableColumn fx:id="colMotherName" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="colMotherAddress" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="colMotherNic" prefWidth="75.0" text="Nic" />
+                                    <TableColumn fx:id="colMotherEmail" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="colMotherPhoneNumber" prefWidth="75.0" text="Phone number" />
+                                    <TableColumn fx:id="colMotherAction" prefWidth="75.0" text="Action" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Father Management">
+               <content>
+                  <AnchorPane prefWidth="646.0" style="-fx-background-color: #57b5ad;">
+                     <children>
+                        <VBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="160.0" prefWidth="722.0">
+                                <content>
+                                  <AnchorPane prefHeight="37.0" prefWidth="694.0">
+                                       <children>
+                                          <VBox prefHeight="194.0" prefWidth="714.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="729.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Father Id">
+                                                         <HBox.margin>
+                                                            <Insets left="3.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <Label fx:id="lableFatherId" prefHeight="18.0" prefWidth="28.0">
+                                                         <HBox.margin>
+                                                            <Insets left="40.0" />
+                                                         </HBox.margin></Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="15.0" prefHeight="38.0" prefWidth="574.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Name" />
+                                                            <TextField fx:id="txtFatherName" prefHeight="26.0" prefWidth="203.0" promptText="Name" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Occupation">
+                                                               <HBox.margin>
+                                                                  <Insets left="50.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtFatherOccupation" prefHeight="26.0" prefWidth="202.0" promptText="Occupation" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="53.0" prefHeight="38.0" prefWidth="574.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="address" />
+                                                            <TextField fx:id="txtFatheraddress" prefHeight="26.0" prefWidth="203.0" promptText="Address" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Email">
+                                                               <HBox.margin>
+                                                                  <Insets left="50.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtFatherEmail" prefHeight="26.0" prefWidth="202.0" promptText="Email" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="92.0" prefHeight="38.0" prefWidth="574.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Nic" />
+                                                            <TextField fx:id="txtFatherNic" prefHeight="26.0" prefWidth="203.0" promptText="Nic" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Phone Number">
+                                                               <HBox.margin>
+                                                                  <Insets left="50.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="txtFatherPhoneNumber" prefHeight="26.0" prefWidth="202.0" promptText="Phone number" HBox.hgrow="ALWAYS">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER" layoutX="15.0" layoutY="130.0" prefHeight="38.0" prefWidth="574.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Dob" />
+                                                            <TextField fx:id="txtFatherDob" prefHeight="26.0" prefWidth="203.0" promptText="Dob" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefWidth="90.0" text="Blood type">
+                                                               <HBox.margin>
+                                                                  <Insets left="50.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <ComboBox fx:id="cmbFatherBloodType" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                                                               <items>
+                                                                  <FXCollections fx:factory="observableArrayList">
+                                                                     <String fx:value="A+" />
+                                                                     <String fx:value="A-" />
+                                                                     <String fx:value="B+" />
+                                                                     <String fx:value="B-" />
+                                                                     <String fx:value="AB+" />
+                                                                     <String fx:value="AB-" />
+                                                                     <String fx:value="O+" />
+                                                                     <String fx:value="O-" />
+                                                                  </FXCollections>
+                                                               </items>
+                                                               <HBox.margin>
+                                                                  <Insets left="30.0" />
+                                                               </HBox.margin>
+                                                            </ComboBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="714.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnFatherRefashOnAction" text="Refash">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                    0                                  </Button>
+                                                      <Button fx:id="btnAddFather" mnemonicParsing="false" onAction="#btnAddFatherOnAction" text="Add Father">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btnUpdateFather" mnemonicParsing="false" onAction="#btnUpdateFatherOnAction" text="Update">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                              <TableView fx:id="tableFather" onMouseClicked="#tableFatherOnClick" prefHeight="0.0" prefWidth="722.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="colFatherId" prefWidth="75.0" text="Father Id" />
+                                  <TableColumn fx:id="colFatherName" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="colFatherAddress" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="colFatherNic" prefWidth="75.0" text="Nic" />
+                                    <TableColumn fx:id="colFatherEmail" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="colFatherPhoneNumber" prefWidth="75.0" text="Phone number" />
+                                    <TableColumn fx:id="colFatherAction" prefWidth="75.0" text="Action" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Child Management">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="738.0" style="-fx-background-color: #57b5ad;">
+                     <children>
+                        <VBox prefHeight="434.0" prefWidth="738.0" spacing="5.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane fitToWidth="true" prefHeight="118.0" prefWidth="729.0" VBox.vgrow="ALWAYS">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="714.0">
+                                       <children>
+                                          <VBox prefWidth="694.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox fx:id="lableChildId" alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="374.0">
+                                                   <children>
+                                                      <Label text="Child Id" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="txtChildId" layoutX="20.0" layoutY="18.0" prefHeight="18.0" prefWidth="17.0">
+                                                         <HBox.margin>
+                                                            <Insets left="65.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="730.0">
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="69.0" text="Gender" />
+                                                      <TextField fx:id="txtChildGender" prefHeight="26.0" prefWidth="215.0" promptText="Gender" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="90.0" prefWidth="90.0" text="Note">
+                                                         <padding>
+                                                            <Insets left="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="txtChildNote" layoutX="141.0" layoutY="12.0" prefHeight="26.0" prefWidth="215.0" promptText="Note" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="730.0">
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="69.0" text="Full name" />
+                                                      <TextField fx:id="txtChildFullName" prefHeight="26.0" prefWidth="215.0" promptText="Full name" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="90.0" prefWidth="90.0" text="Dob">
+                                                         <padding>
+                                                            <Insets left="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="txtChildDob" layoutX="141.0" layoutY="12.0" prefHeight="26.0" prefWidth="215.0" promptText="Dob" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="730.0">
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="69.0" text="Address" />
+                                                      <TextField fx:id="txtChildAddress" prefHeight="26.0" prefWidth="215.0" promptText="Address" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="90.0" prefWidth="90.0" text="Weight">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="txtChildWeight" layoutX="141.0" layoutY="12.0" prefHeight="26.0" prefWidth="215.0" promptText="Weight" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="730.0">
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="69.0" text="Birth place" />
+                                                      <TextField fx:id="txtChildBirthPlace" prefHeight="26.0" prefWidth="215.0" promptText="Birith place" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="90.0" prefWidth="90.0" text="Height">
+                                                         <padding>
+                                                            <Insets left="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="txtChildHeight" layoutX="141.0" layoutY="12.0" prefHeight="26.0" prefWidth="215.0" promptText="Height" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="727.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnChildRefashOnAction" text="Refash">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btnChildAdd" mnemonicParsing="false" onAction="#btnChildAddOnAction" text="Child add">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btnUpdateChild" mnemonicParsing="false" onAction="#btnChildUpdateOnAction" text="Update">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefWidth="730.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="69.0" text="Blood type" />
+                                                      <ComboBox fx:id="cmbChildBloodType" prefWidth="150.0">
+                                                         <items>
+                                                            <FXCollections fx:factory="observableArrayList">
+                                                               <String fx:value="A+" />
+                                                               <String fx:value="A-" />
+                                                               <String fx:value="B+" />
+                                                               <String fx:value="B-" />
+                                                               <String fx:value="AB+" />
+                                                               <String fx:value="AB-" />
+                                                               <String fx:value="O+" />
+                                                               <String fx:value="O-" />
+                                                            </FXCollections>
+                                                         </items>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </ComboBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                              <TableView fx:id="tableChild" onMouseClicked="#tableChildOnClicked" prefHeight="0.0" prefWidth="722.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="colChildId" prefWidth="75.0" text="Child Id" />
+                                  <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="colAddress" prefWidth="123.199951171875" text="Address" />
+                                    <TableColumn fx:id="colGender" prefWidth="119.20001220703125" text="Gender" />
+                                    <TableColumn fx:id="colDob" prefWidth="75.0" text="Dob" />
+                                    <TableColumn fx:id="colAction" prefWidth="75.0" text="Action" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
