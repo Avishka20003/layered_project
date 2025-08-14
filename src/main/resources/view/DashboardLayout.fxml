@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="486.0" prefWidth="824.0" style="-fx-background-color: #e10e10e10;" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.layered_project.controller.DashboardLayoutController">
+   <children>
+      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="14.0" layoutY="71.2" prefWidth="260.0" spacing="20.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../css/Style.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo/img.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#btnDashBoardOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="DashBoard" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#btnClinicOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Clinic" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="10.0" layoutY="56.0" onAction="#btnFamilyManageOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Family Manage" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="10.0" layoutY="101.0" onAction="#btnMedicalStaffOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Medical Staff" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="10.0" layoutY="147.0" onAction="#btnSessionOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Sessions" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="50.0" layoutY="358.0" onAction="#btnTestOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Tests" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="50.0" layoutY="353.0" onAction="#btnReportOnAction" prefWidth="180.0" styleClass="btn" stylesheets="@../css/Style.css" text="Report" textAlignment="CENTER" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: #90D1CA;" styleClass="main-box" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Maternal Clinic System" textAlignment="CENTER" wrappingWidth="319.2287139892578" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </HBox>
+      <AnchorPane fx:id="ancDashboardLayoutContainer" layoutX="280.8" layoutY="91.2" prefHeight="439.0" prefWidth="528.0" styleClass="main-box" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="91.0" />
+   </children>
+</AnchorPane>

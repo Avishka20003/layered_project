@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.layered_project.controller.MedicalStaffController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="7.0" prefHeight="200.0" prefWidth="648.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+
+            <!-- DOCTOR MANAGEMENT TAB -->
+            <Tab text="Doctor Management">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <!-- Doctor Form -->
+                              <AnchorPane prefHeight="220.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor ">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+
+                                          <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor ID:" />
+                                                <Text fx:id="txtDoctorId" strokeType="OUTSIDE" strokeWidth="0.0" text="Auto Generated" />
+                                             </children>
+                                          </HBox>
+
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                                      <TextField fx:id="txtDoctorName" prefHeight="35.0" promptText="Enter doctor's full name" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specialization:" />
+                                                      <TextField fx:id="txtDoctorSpecialise" prefHeight="35.0" promptText="Enter specialization" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                                                      <TextField fx:id="txtDoctorAddress" prefHeight="35.0" promptText="Enter address" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:" />
+                                                      <TextField fx:id="txtDoctorContactNumber" prefHeight="35.0" promptText="Enter contact number" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+
+                                          <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                             <children>
+                                                <Button fx:id="btnDoctorRefashId" mnemonicParsing="false" onAction="#btnDoctorRefashOnAction" prefHeight="35.0" prefWidth="100.0" text="Clear" />
+                                                <Button fx:id="btnDoctorAddId" mnemonicParsing="false" onAction="#btnDoctorAddOnAction" prefHeight="35.0" prefWidth="120.0" text="Add Doctor" />
+                                                <Button fx:id="btnDoctorUpdateId" disable="true" mnemonicParsing="false" onAction="#btnDoctorUpdateOnAction" prefHeight="35.0" prefWidth="100.0" text="Update" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+
+                              <!-- Doctor Table -->
+                              <TableView fx:id="tableDoctor" onMouseClicked="#tableDoctorOnClicked" prefHeight="300.0" VBox.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="colDoctorId" prefWidth="80.0" text="ID" />
+                                    <TableColumn fx:id="colDoctorName" prefWidth="150.0" text="Name" />
+                                    <TableColumn fx:id="colDoctorAddress" prefWidth="200.0" text="Address" />
+                                    <TableColumn fx:id="colDoctorContactNumber" prefWidth="130.0" text="Contact" />
+                                    <TableColumn fx:id="colDoctorSpecialise" prefWidth="150.0" text="Specialization" />
+                                    <TableColumn fx:id="colDoctorAction" prefWidth="100.0" text="Actions" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+
+            <!-- MIDWIFE MANAGEMENT TAB -->
+            <Tab text="Midwife Management">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <!-- Midwife Form -->
+                              <AnchorPane prefHeight="180.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Midwife ">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+
+                                          <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Midwife ID:" />
+                                                <Text fx:id="txtMidwifeId" strokeType="OUTSIDE" strokeWidth="0.0" text="Auto Generated" />
+                                             </children>
+                                          </HBox>
+
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                                      <TextField fx:id="txtMidwifeName" prefHeight="35.0" promptText="Enter midwife's full name" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:" />
+                                                      <TextField fx:id="txtMidwifeContactNumber" prefHeight="35.0" promptText="Enter contact number" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                                                <TextField fx:id="txtMidwifeAddress" prefHeight="35.0" promptText="Enter address" />
+                                             </children>
+                                          </VBox>
+
+                                          <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                             <children>
+                                                <Button fx:id="btnMidwifeRefashId" mnemonicParsing="false" onAction="#btnMidwifeRefashOnAction" prefHeight="35.0" prefWidth="100.0" text="Clear" />
+                                                <Button fx:id="btnMidwifeAdd" mnemonicParsing="false" onAction="#btnMidwifeAddOnAction" prefHeight="35.0" prefWidth="120.0" text="Add Midwife" />
+                                                <Button fx:id="btnMidwifeUpdate" disable="true" mnemonicParsing="false" onAction="#btnMidwifeUpdateOnAction" prefHeight="35.0" prefWidth="100.0" text="Update" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+
+                              <!-- Midwife Table -->
+                              <TableView fx:id="tableMidwife" onMouseClicked="#tableMidwifeOnClicked" prefHeight="108.0" prefWidth="579.0" VBox.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="colMidwifeId" prefWidth="80.0" text="ID" />
+                                    <TableColumn fx:id="colMidwifeName" prefWidth="200.0" text="Name" />
+                                    <TableColumn fx:id="colMidwifeAddress" prefWidth="250.0" text="Address" />
+                                    <TableColumn fx:id="colMidwifeContactNumber" prefWidth="150.0" text="Contact" />
+                                    <TableColumn fx:id="colMidwifeAction" prefWidth="100.0" text="Actions" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+
+            <!-- CASHIER MANAGEMENT TAB -->
+            <Tab text="Cashier Management">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <!-- Cashier Form -->
+                              <AnchorPane prefHeight="180.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier ">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+
+                                          <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier ID:" />
+                                                <Text fx:id="txtCashierId" strokeType="OUTSIDE" strokeWidth="0.0" text="Auto Generated" />
+                                             </children>
+                                          </HBox>
+
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                                      <TextField fx:id="txtCashierName" prefHeight="35.0" promptText="Enter cashier's full name" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:" />
+                                                      <TextField fx:id="txtCashierContactNumber" prefHeight="35.0" promptText="Enter contact number" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                                                <TextField fx:id="txtCashierAddress" prefHeight="35.0" promptText="Enter address" />
+                                             </children>
+                                          </VBox>
+
+                                          <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                             <children>
+                                                <Button fx:id="txtCashierRefash" mnemonicParsing="false" onAction="#btnCashierRefashOnAction" prefHeight="35.0" prefWidth="100.0" text="Clear" />
+                                                <Button fx:id="txtCashierAdd" mnemonicParsing="false" onAction="#btnCashierAddOnAction" prefHeight="35.0" prefWidth="120.0" text="Add Cashier" />
+                                                <Button fx:id="txtCashierUpdate" disable="true" mnemonicParsing="false" onAction="#btnCashierUpdateOnAction" prefHeight="35.0" prefWidth="100.0" text="Update" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+
+                              <!-- Cashier Table -->
+                              <TableView fx:id="tableCashier" onMouseClicked="#tableCashierOnClicked" prefHeight="141.0" prefWidth="579.0" VBox.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="colCashierId" prefWidth="80.0" text="ID" />
+                                    <TableColumn fx:id="colCashierName" prefWidth="200.0" text="Name" />
+                                    <TableColumn fx:id="colCashierAddress" prefWidth="250.0" text="Address" />
+                                    <TableColumn fx:id="colCashierContactNumber" prefWidth="150.0" text="Contact" />
+                                    <TableColumn fx:id="colCashierAction" prefWidth="100.0" text="Actions" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <VBox style="-fx-background-color: #f5f7fa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: #00796B; -fx-padding: 15px;">
+         <HBox alignment="CENTER_RIGHT" spacing="20" HBox.hgrow="ALWAYS">
+            <Circle fill="white" radius="15" />
+            <Circle fill="white" radius="15" />
+         </HBox>
+      </HBox>
+
+      <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+         <VBox prefHeight="150" prefWidth="200" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #57b5ad; -fx-background-radius: 10 10 0 0; -fx-padding: 10;">
+               <Circle fill="white" radius="15" />
+               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 0 0 0 10;" text="Doctors">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox alignment="CENTER" spacing="5" style="-fx-padding: 15;">
+               <Text style="-fx-font-size: 32px; -fx-fill: #00796B;" text="24">
+                  <font>
+                     <Font name="System Bold" size="32.0" />
+                  </font>
+               </Text>
+               <Label style="-fx-text-fill: #666; -fx-font-size: 12px;" text="Active Professionals" />
+            </VBox>
+         </VBox>
+
+         <VBox prefHeight="150" prefWidth="200" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #ff7043; -fx-background-radius: 10 10 0 0; -fx-padding: 10;">
+               <Circle fill="white" radius="15" />
+               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 0 0 0 10;" text="Patients">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox alignment="CENTER" spacing="5" style="-fx-padding: 15;">
+               <Text style="-fx-font-size: 32px; -fx-fill: #ff7043;" text="156">
+                  <font>
+                     <Font name="System Bold" size="32.0" />
+                  </font>
+               </Text>
+               <Label style="-fx-text-fill: #666; -fx-font-size: 12px;" text="Currently Registered" />
+            </VBox>
+         </VBox>
+
+         <VBox prefHeight="150" prefWidth="200" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #5c6bc0; -fx-background-radius: 10 10 0 0; -fx-padding: 10;">
+               <Circle fill="white" radius="15" />
+               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 0 0 0 10;" text="Appointments">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox alignment="CENTER" spacing="5" style="-fx-padding: 15;">
+               <Text style="-fx-font-size: 32px; -fx-fill: #5c6bc0;" text="42">
+                  <font>
+                     <Font name="System Bold" size="32.0" />
+                  </font>
+               </Text>
+               <Label style="-fx-text-fill: #666; -fx-font-size: 12px;" text="Today's Schedule" />
+            </VBox>
+         </VBox>
+
+         <VBox prefHeight="150" prefWidth="200" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #66bb6a; -fx-background-radius: 10 10 0 0; -fx-padding: 10;">
+               <Circle fill="white" radius="15" />
+               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 0 0 0 10;" text="Prenatal">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox alignment="CENTER" spacing="5" style="-fx-padding: 15;">
+               <Text style="-fx-font-size: 32px; -fx-fill: #66bb6a;" text="28">
+                  <font>
+                     <Font name="System Bold" size="32.0" />
+                  </font>
+               </Text>
+               <Label style="-fx-text-fill: #666; -fx-font-size: 12px;" text="Active Cases" />
+            </VBox>
+         </VBox>
+      </HBox>
+
+      <HBox spacing="20" style="-fx-padding: 0 20 20 20;">
+         <VBox prefWidth="500" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #00796B; -fx-background-radius: 10 10 0 0; -fx-padding: 15;">
+               <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="Recent Appointments">
+                  <font>
+                     <Font name="System Bold" size="18.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox spacing="10" style="-fx-padding: 15;">
+               <Label style="-fx-text-fill: #666;" text="Appointment list would appear here..." />
+            </VBox>
+         </VBox>
+
+         <VBox prefWidth="280" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #00796B; -fx-background-radius: 10 10 0 0; -fx-padding: 15;">
+               <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="Quick Actions">
+                  <font>
+                     <Font name="System Bold" size="18.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <VBox spacing="10" style="-fx-padding: 15;">
+               <Button maxWidth="Infinity" style="-fx-background-color: #57b5ad; -fx-text-fill: white; -fx-font-weight: bold;" text="New Patient" />
+               <Button maxWidth="Infinity" style="-fx-background-color: #5c6bc0; -fx-text-fill: white; -fx-font-weight: bold;" text="Schedule Appointment" />
+               <Button maxWidth="Infinity" style="-fx-background-color: #66bb6a; -fx-text-fill: white; -fx-font-weight: bold;" text="Prenatal Checkup" />
+               <Button maxWidth="Infinity" style="-fx-background-color: #ff7043; -fx-text-fill: white; -fx-font-weight: bold;" text="Generate Report" />
+            </VBox>
+         </VBox>
+      </HBox>
+   </VBox>
+</AnchorPane>

@@ -439,7 +439,13 @@ public class FamilyManageController implements Initializable {
         try {
             loadFatherTableData();
             ArrayList<FatherDto> fathers= fatherModel.getAllFather();
-            cmbFatherId.setItems(FXCollections.observableArrayList(fathers));
+            ArrayList<String> fatherIds  = new ArrayList<>();
+
+            for (FatherDto father : fathers) {
+                fatherIds.add(Integer.toString(father.getFather_id()));
+            }
+
+            cmbFatherId.setItems(FXCollections.observableArrayList(fatherIds));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
